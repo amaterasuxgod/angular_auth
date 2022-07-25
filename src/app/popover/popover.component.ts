@@ -1,5 +1,7 @@
-import { Component, Input, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
-import { LoginComponent } from '../login/login.component';
+import { Component, OnInit} from '@angular/core';
+import {faXmark} from '@fortawesome/free-solid-svg-icons'
+import { SharingService } from '../sharing.service';
+
 
 @Component({
   selector: 'app-popover',
@@ -8,9 +10,14 @@ import { LoginComponent } from '../login/login.component';
 })
 export class PopoverComponent implements OnInit {
 
-  constructor() { }
+  xmark = faXmark;
+
+  constructor(
+    private _SharingService: SharingService,
+  ) { }
 
   ngOnInit(): void {
   }
+
 
 }

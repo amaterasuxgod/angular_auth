@@ -169,3 +169,301 @@ a {
     background-color: #7479e4;
     cursor: pointer;
 }
+
+
+
+@media only screen and (max-width: 1300px)
+{
+
+}
+
+@media only screen and (max-width: 1100px)
+{
+    .login-header-1 {
+        font-size: 32px;
+        line-height: 50px;
+    }
+    
+    .login-subhead-1 {
+
+        margin-bottom: 35px;
+    }
+    
+    
+    .login-label {
+        margin-bottom: 12px;
+    }
+    
+    .login-input {
+        width: 390px;
+        height: 45px;
+        padding-left: 20px;
+    }
+    
+    
+    .eyeicon {
+        position:absolute;
+        right: 20px;
+        top: 14px;
+        cursor: pointer;
+    }
+    
+    
+    .login-logo {
+        margin-bottom: 90px;
+    }
+    
+    .checkbox-container {
+        margin-top: 22px;
+    }
+    
+    .login-label-additional {
+        margin-top: 22px;
+    }
+    
+    .login-checkbox {
+        margin-bottom: 30px;
+    }
+    
+    
+    
+    .login-button {
+        height: 50px;
+        width: 110px;
+        border-radius: 11px;
+    }
+
+}
+
+@media only screen and (max-width: 992px) {
+
+    .login-header-1 {
+        font-size: 30px;
+        line-height: 45px;
+    }
+    
+    .login-subhead-1 {
+
+        margin-bottom: 32px;
+    } 
+    
+    .login-button {
+        height: 50px;
+        width: 110px;
+        border-radius: 11px;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    
+    .login-subhead-1 {
+
+        margin-bottom: 30px;
+    }
+    
+    
+    
+    .login-logo {
+        margin-bottom: 75px;
+    }
+    
+    
+    .login-button {
+        height: 45px;
+        width: 100px;
+        border-radius: 10px;
+    }
+
+}
+
+
+@media only screen and (max-width: 576px) {
+
+    
+    .login-subhead-1 {
+
+        margin-bottom: 25px;
+    }
+    
+    
+    
+    .login-logo {
+        margin-bottom: 65px;
+    }
+    
+    
+    .login-button {
+        height: 45px;
+        width: 100px;
+        border-radius: 10px;
+    }
+
+    .login-input {
+        width: 370px;
+        height: 40px;
+        padding-left: 20px;
+    }
+    
+    
+    .eyeicon {
+        position:absolute;
+        right: 20px;
+        top: 12px;
+        cursor: pointer;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    
+    .login-subhead-1 {
+
+        margin-bottom: 30px;
+    }
+    
+    
+    
+    .login-logo {
+        margin-bottom: 75px;
+    }
+    
+    
+    .login-button {
+        height: 45px;
+        width: 100px;
+        border-radius: 10px;
+    }
+
+}
+
+
+@media only screen and (max-width: 576px) {
+
+    
+    .login-subhead-1 {
+
+        margin-bottom: 25px;
+    }
+    
+    
+    
+    .login-logo {
+        margin-bottom: 65px;
+    }
+    
+    
+    .login-button {
+        height: 45px;
+        width: 100px;
+        border-radius: 10px;
+    }
+
+    .login-input {
+        width: 370px;
+        height: 40px;
+        padding-left: 20px;
+    }
+    
+    
+    .eyeicon {
+        position:absolute;
+        right: 20px;
+        top: 12px;
+        cursor: pointer;
+    }
+
+}
+
+@media only screen and (max-width: 390px) {
+
+    
+    .login-logo {
+        margin-bottom: 55px;
+    }
+     
+    .login-input {
+        width: 320px;
+        height: 40px;
+        padding-left: 20px;
+    }
+    
+    
+    .eyeicon {
+        position:absolute;
+        right: 20px;
+        top: 12px;
+        cursor: pointer;
+    }
+    
+    
+    .button-wrapper {
+        display: grid;
+        justify-items: center;
+    }
+    
+    .login-button {
+        height: 54px;
+        width: 118px;
+        background: #4C54F4;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        color: #FFFFFF;
+        transition: background-color 1s;
+    }
+    
+    .login-button:hover{
+        background-color: #7479e4;
+        cursor: pointer;
+    }
+}
+
+
+@media only screen and (max-width: 320px) {
+
+    
+    .login-logo {
+        margin-bottom: 55px;
+    }
+     
+    .login-input {
+        width: 280px;
+        height: 40px;
+        padding-left: 20px;
+    }
+    
+    
+    .eyeicon {
+        position:absolute;
+        right: 20px;
+        top: 12px;
+        cursor: pointer;
+    }
+    
+    
+    .button-wrapper {
+        display: grid;
+        justify-items: center;
+    }
+    
+    .login-button {
+        height: 54px;
+        width: 118px;
+        background: #4C54F4;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        color: #FFFFFF;
+        transition: background-color 1s;
+    }
+    
+    .login-button:hover{
+        background-color: #7479e4;
+        cursor: pointer;
+    }
+}

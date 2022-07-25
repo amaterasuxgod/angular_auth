@@ -1,9 +1,8 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, ComponentRef, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { SharingService } from '../sharing.service';
-import {faEye, faEyeSlash, faGrinTongueSquint} from '@fortawesome/free-solid-svg-icons'
+import {faEye, faEyeSlash} from '@fortawesome/free-solid-svg-icons'
 import { PopoverComponent } from '../popover/popover.component';
 
 
@@ -24,9 +23,10 @@ export class LoginComponent {
   token:any;
   refreshToken:any;
   @ViewChild('container', {read: ViewContainerRef, static:true})
-  container!: ViewContainerRef;
+  container: ViewContainerRef;
+  component: any;
   popout = false;
-  errorMessage = null
+
 
   constructor(
     private http: HttpClient,
@@ -36,16 +36,31 @@ export class LoginComponent {
     ) { }
 
 
+
   createComponent(){
+    this.popout = true;
     this.container.clear();
-    this.container.createComponent(PopoverComponent)
+    this.component = this.container.createComponent(PopoverComponent);
+    this._SharingService.removePopout(this.component);
+    if(this.popout){
+      setTimeout(()=>{
+        this.hideComponent()
+      },15000)
+    }
   }
+
+  hideComponent() {
+    this.popout = false;
+    this.container.clear();
+  }
+
 
 
   submit(data: {login: string, password: string}) {
     console.log(data)
     this.http.post('http://51.15.220.219:81/api/login', data)
-    .subscribe((res) => {
+    .subscribe(
+      res => {
         this.response = res;
         this.token = this.response.tokens.token
         this.refreshToken = this.response.tokens.refreshToken
@@ -58,7 +73,8 @@ export class LoginComponent {
         }
         console.log(localStorage.getItem('rememberMe'))
         this.router.navigate(['/dashboard']);
-      }
+      },
+      error => this.createComponent()
       
      )
   }
