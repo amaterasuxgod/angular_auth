@@ -1,0 +1,30 @@
+<main class="wrapper">
+    <form #loginForm="ngForm" (ngSubmit)="submit(loginForm.value)" class="login-form">
+      <div class="image-container">
+        <img src="../../assets/img/logo.PNG" alt="image" class="login-logo">
+      </div>
+      <h1 class="login-header-1">Добро пожаловать</h1>
+      <p class="login-subhead-1">Авторизуйтесь, чтобы продолжить</p>
+      <div class="form-floating login-inner-container">
+        <p class="login-label">Логин*</p>
+        <input name='login' placeholder="mail@simmmple.com" ngModel class="login-input">
+      </div>
+      <div class="form-floating login-inner-container">
+        <p class="login-label login-label-additional">Пароль*</p>
+        <div class="password-input">
+          <input [type]="changetype?'password':'text'" name='password' placeholder="Минимум 8 символов" ngModel class="login-input">
+          <span class="eyeicon" (click)="viewpass()"><fa-icon [icon]='eye' *ngIf="visible"></fa-icon></span>
+          <span class="eyeicon" (click)="viewpass()"><fa-icon [icon]='slashEye' *ngIf="!visible"></fa-icon></span>
+        </div>
+      </div>
+  
+      <div class="checkbox-container">
+          <input type="checkbox" value="remember-me" class="login-checkbox"> Запомнить
+          <a routerLink='#' class="forgotten-password">Забыли пароль?</a> 
+          
+      </div>
+      <div class="button-wrapper">
+        <button class="login-button" type="submit">Войти</button>
+      </div>
+    </form>
+  </main>
