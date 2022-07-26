@@ -1,3 +1,5 @@
 <div class="popout-wrapper">
-    
+    <span *ngIf="isLogin; else elseBlock "><fa-icon [icon]="xcircle"></fa-icon></span>
+    <ng-template #elseBlock><span><fa-icon [icon]='xmark'></fa-icon></span></ng-template>
+    <p> {{ text }} </p>
 </div>

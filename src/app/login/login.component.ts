@@ -22,10 +22,13 @@ export class LoginComponent {
   rememberMe = false;
   token:any;
   refreshToken:any;
+
+  // Popout
   @ViewChild('container', {read: ViewContainerRef, static:true})
   container: ViewContainerRef;
   component: any;
   popout = false;
+
 
 
   constructor(
@@ -41,6 +44,11 @@ export class LoginComponent {
     this.popout = true;
     this.container.clear();
     this.component = this.container.createComponent(PopoverComponent);
+    this.component.instance.type = 'pass';
+    this.component.instance.text = 'Бэнг'
+    this.component.instance.width = 320
+    this.component.instance.timeout = 15;
+
     this._SharingService.removePopout(this.component);
     if(this.popout){
       setTimeout(()=>{
