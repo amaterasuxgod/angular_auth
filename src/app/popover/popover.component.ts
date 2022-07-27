@@ -2,13 +2,13 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 import { Component, Input,  OnInit, } from '@angular/core';
 import {faXmark, faExclamationCircle, faExclamation} from '@fortawesome/free-solid-svg-icons'
 import { Subject } from 'rxjs';
-import { SharingService } from '../sharing.service';
 
 
 @Component({
   selector: 'app-popover',
   templateUrl: './popover.component.html',
   styleUrls: ['./popover.component.css'],
+  // создание анимации для попаута
   animations: [
     trigger('openDiv',[
       state('start',style({
@@ -42,20 +42,22 @@ export class PopoverComponent implements OnInit {
 
 
   constructor(
-    private _SharingService: SharingService,
   ) { }
 
-
+  
+  // отправляем аутпут в родительский компонент
   sendData(){
     this.output.next(true);
   }
 
   ngOnInit(): void {
-
+    // если тип элемент логин, меняем значение переменной. Далее можно добавлять различные типы компонента,
+    // на которые можно будет вешать определенную иконку, привязывая ее к переменным.
     if(this.type=='login'){
       this.isLogin = true;
     }
 
+    // таймаут для триггера анимации
     setTimeout(() => this.clickedDivState = 'end', 0);
     setTimeout(() => this.clickedDivState = 'start', 14500);
   }
