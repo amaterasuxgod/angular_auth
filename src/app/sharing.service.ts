@@ -7,7 +7,6 @@ import { LoginComponent } from './login/login.component';
 export class SharingService {
 
   data: any;
-  del_popout: any;
 
   constructor() { }
 
@@ -15,7 +14,4 @@ export class SharingService {
     this.data = res;
   };
 
-  removePopout(res1:any) {
-    this.del_popout = res1;
-  };
 }

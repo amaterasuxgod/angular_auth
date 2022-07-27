@@ -327,7 +327,7 @@ a {
     
     
     .login-logo {
-        margin-bottom: 75px;
+        margin-bottom: 55px;
     }
     
     
@@ -335,44 +335,6 @@ a {
         height: 45px;
         width: 100px;
         border-radius: 10px;
-    }
-
-}
-
-
-@media only screen and (max-width: 576px) {
-
-    
-    .login-subhead-1 {
-
-        margin-bottom: 25px;
-    }
-    
-    
-    
-    .login-logo {
-        margin-bottom: 65px;
-    }
-    
-    
-    .login-button {
-        height: 45px;
-        width: 100px;
-        border-radius: 10px;
-    }
-
-    .login-input {
-        width: 370px;
-        height: 40px;
-        padding-left: 20px;
-    }
-    
-    
-    .eyeicon {
-        position:absolute;
-        right: 20px;
-        top: 12px;
-        cursor: pointer;
     }
 
 }
@@ -381,7 +343,7 @@ a {
 
     
     .login-logo {
-        margin-bottom: 55px;
+        margin-bottom: 10px;
     }
      
     .login-input {
@@ -423,11 +385,11 @@ a {
 }
 
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 321px) {
 
     
     .login-logo {
-        margin-bottom: 55px;
+        margin-bottom: 5px;
     }
      
     .login-input {

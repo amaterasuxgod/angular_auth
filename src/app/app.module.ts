@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PopoverComponent } from './popover/popover.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PopoverComponent } from './popover/popover.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

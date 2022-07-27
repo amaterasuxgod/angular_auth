@@ -1,9 +1,137 @@
-.popout-wrapper {
+
+.popover-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    padding: 0 20px;
+    letter-spacing: -0.02em;
+    padding: 22px 45px 22px 50px;
+}
+
+.alert-content {
     max-width: 320px;
-    border: 1px solid gray;
+    border: 1px solid rgba(245, 245, 245, 0.795);
     position: fixed;
     top: 50px;
     right: 50px;
     border-radius: 10px;
-    padding: 10px;
+    box-shadow: 0 3px #d3d2d2fb;
+    border-left: 4px solid red;
 }
+
+.alert-icon {
+    position: absolute; 
+    top: 39%;
+    left: 21px;
+ }
+
+ .closing-icon {
+    position: absolute; 
+    top: 9px;
+    right: 9px;
+ }
+
+
+ @media only screen and (max-width: 1250px) {
+    .popover-text {
+        padding: 18px 45px 18px 50px;
+    }
+    
+    .alert-content {
+        top: 40px;
+        right: 40px;
+    }
+    
+ }
+
+ @media only screen and (max-width: 900px) {
+    .popover-text {
+        padding: 14px 45px 14px 50px;
+    }
+    
+    .alert-content {
+        top: 35px;
+        right: 35px;
+    }
+    
+ }
+
+ @media only screen and (max-width: 768px) {
+    .popover-text {
+        padding: 10px 45px 10px 50px;
+    }
+    
+    .alert-content {
+        top: 25px;
+        right: 25px;
+    }
+
+    .alert-icon {
+        position: absolute; 
+        top: 35%;
+        left: 21px;
+     }
+    
+ }
+
+ @media only screen and (max-width: 576px) {
+    .popover-text {
+        padding: 7px 45px 7px 50px;
+    }
+    
+    .alert-content {
+        top: 15px;
+        right: 15px;
+    }
+
+    .alert-icon {
+        position: absolute; 
+        top: 33%;
+        left: 21px;
+     }
+    
+ }
+
+ @media only screen and (max-width: 390px) {
+    .popover-text {
+        padding: 5px 45px 5px 50px;
+    }
+    
+    .alert-content {
+        top: 5px;
+        right: 5px;
+    }
+
+    .alert-icon {
+        position: absolute; 
+        top: 33%;
+        left: 21px;
+     }
+    
+ }
+
+ @media only screen and (max-width: 321px) {
+    .popover-text {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 100%;
+        padding: 3px 45px 3px 50px;
+    }
+    
+    .alert-content {
+        top: 5px;
+        right: 5px;
+    }
+
+    .alert-icon {
+        position: absolute; 
+        top: 25%;
+        left: 21px;
+     }
+    
+     .closing-icon {
+        position: absolute; 
+        top: 2px;
+        right: 2px;
+     }
+ }

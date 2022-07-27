@@ -1,5 +1,7 @@
-<div class="popout-wrapper">
-    <span *ngIf="isLogin; else elseBlock "><fa-icon [icon]="xcircle"></fa-icon></span>
-    <ng-template #elseBlock><span><fa-icon [icon]='xmark'></fa-icon></span></ng-template>
-    <p> {{ text }} </p>
+<div [@openDiv]="clickedDivState" [ngStyle]="{'max-width':width}" class="alert-content">
+            <span class="alert-icon"><fa-icon [icon]="xcircle" *ngIf="isLogin; else elseBlock"></fa-icon></span>
+            <ng-template #elseBlock><span class="alert-icon"><fa-icon [icon]="exclamation"></fa-icon></span></ng-template>
+            <p class="popover-text">{{ text }}</p>
+            <span class="closing-icon"><button style="border:none; cursor: pointer;" (click)="sendData()"><fa-icon [icon]="xmark"></fa-icon></button></span>     
+    
 </div>

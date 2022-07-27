@@ -22,13 +22,18 @@ export class LoginComponent {
   rememberMe = false;
   token:any;
   refreshToken:any;
+  close:boolean;
+
 
   // Popout
   @ViewChild('container', {read: ViewContainerRef, static:true})
   container: ViewContainerRef;
   component: any;
   popout = false;
-
+  popout_type: string = 'login';
+  popout_text: string = 'Неверный логин либо пароль';
+  popout_width: string = '320px';
+  popout_timeout: number = 15000;
 
 
   constructor(
@@ -39,17 +44,18 @@ export class LoginComponent {
     ) { }
 
 
-
   createComponent(){
     this.popout = true;
     this.container.clear();
     this.component = this.container.createComponent(PopoverComponent);
-    this.component.instance.type = 'pass';
-    this.component.instance.text = 'Бэнг'
-    this.component.instance.width = 320
-    this.component.instance.timeout = 15;
-
-    this._SharingService.removePopout(this.component);
+    this.component.instance.type = this.popout_type;
+    this.component.instance.text = this.popout_text;
+    this.component.instance.width = this.popout_width;
+    this.component.instance.timeout = this.popout_timeout;
+    this.component.instance.output.subscribe((results:boolean)=>{
+      this.close = results
+      this.hideComponent();
+    })
     if(this.popout){
       setTimeout(()=>{
         this.hideComponent()
